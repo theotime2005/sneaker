@@ -1,3 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Teko:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: Teko;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    background: linear-gradient(
+    to bottom right, 
+    black, 
+    #170f1b,
+    #280f28)
+}
+
+body
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.font-teko {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px #8b00ff, 0 0 10px #8b00ff, 0 0 15px #8b00ff;
+  }
+  
+  .neon-glow {
+    filter: drop-shadow(0 0 6px #8b00ff);
+  }
+  
+  .group-hover\\:scale-x-100 {
+    transform: scaleX(1);
+  }
+  
+  .group-hover\\:scale-x-0 {
+    transform: scaleX(0);
+  }
+  
+
+.text-neon-purple {
+    color: #8b00ff;
+    text-shadow: 0 0 8px #8b00ff, 0 0 16px #8b00ff, 0 0 24px #ff004d;
+  }
+  
+  .text-neon-red {
+    color: #ff004d;
+    text-shadow: 0 0 8px #ff004d, 0 0 16px #ff004d, 0 0 24px #ff004d;
+  }
+  
+  .bg-gradient-cyberpunk {
+    background: linear-gradient(135deg, #000000, #8b00ff, #ff004d, #000000);
+    background-size: 300% 300%;
+    animation: gradient-animation 8s ease infinite;
+  }
+  
+  .neon-glow {
+    filter: drop-shadow(0 0 12px #8b00ff) drop-shadow(0 0 24px #ff004d);
+  }
+  
+  .shadow-neon-glow:hover {
+    box-shadow: 0 0 2px #8b00ff, 0 0 10px #ff004d;
+    transition: all, ease-in-out, .3s;
+    background-color:  #2e0d27c1;
+
+}
+
+
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @media (max-width:640px ){
+    a.active{
+        background-color: #8b00ff;
+        color: #000000;
+    }
+  }
+
+
+
