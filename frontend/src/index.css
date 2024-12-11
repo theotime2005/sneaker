@@ -18,7 +18,7 @@ html{
     to bottom right, 
     black, 
     #170f1b,
-    #280f28)
+    #1e0618)
 }
 
 body
@@ -99,6 +99,8 @@ body
     }
   }
   
+
+
   @media (max-width:640px ){
     a.active{
         background-color: #8b00ff;

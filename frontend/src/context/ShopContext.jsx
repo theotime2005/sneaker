@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { products } from "../assets/assets.jsx";
+import { products } from "../../public/assets/assets.jsx";
 
 export const ShopContext = createContext();
 

@@ -1,14 +1,13 @@
-import WARNING from '../assets/WARNING.png'; 
 import React from 'react';
 
 const OurPolicy = () => {
   return (
-    <div className="relative flex flex-col justify-center items-center py-24 px-8 bg-transparent text-center overflow-hidden">
+    <div className="relative flex flex-col justify-center items-center py-24 px-8 bg-transparent text-center overflow-hidden shadow-neon-glow">
       
       <div className="relative p-10 rounded-xl">
         
         <img 
-          src={WARNING} 
+          src="/assets/WARNING.png" 
           className="w-24 sm:w-28 mx-auto mb-6 neon-glow animate-pulse" 
           alt="Warning" 
         />

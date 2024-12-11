@@ -1,5 +1,4 @@
 import React from 'react';
-import robot from '../assets/robot.png';
 
 const Hero = () => {
   return (
@@ -28,8 +27,8 @@ const Hero = () => {
       <div className="w-full sm:w-1/2 flex items-center justify-center">
         <img
           className="w-full sm:w-10/12 rounded-xl neon-glow shadow-2xl transition-transform duration-500 hover:scale-105"
-          src={robot}
-          alt="Cyberpunk Robot"
+          src="/assets/robot.png"
+          alt=" Robot"
         />
       </div>
     </div>

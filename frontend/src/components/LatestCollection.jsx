@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
 import Productitem from './Productitem';
 
+
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
   const [latestProducts, setLatestProducts] = useState([]);
