@@ -16,7 +16,7 @@ const BestSeller = () => {
     <div className="my-10 p-8 rounded-lg shadow-neon-glow"> 
       <div className="text-center text-3xl py-8">
         <Title text1="BEST" text2="SELLERS" />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
+        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-400">
           Check out our best-selling products!
         </p>
       </div>

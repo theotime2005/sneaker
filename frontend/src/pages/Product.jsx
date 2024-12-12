@@ -4,7 +4,7 @@ import { ShopContext } from '../context/ShopContext';
 
 const Product = () => {
   const { productId } = useParams();  
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState('');
 
@@ -13,7 +13,7 @@ const Product = () => {
     if (foundProduct) {
       setProductData(foundProduct);
       setImage(foundProduct.image[0]);
-      console.log(foundProduct);
+      
     }
   };
 
@@ -52,7 +52,7 @@ const Product = () => {
   
 
 </div>
-<button className='bg-pink-800 text-gray-300 px-8 py-3 text-sm active:bg-pink-400'>ADD TO CART</button>
+<button  onClick={()=> addToCart(productData.id)} className='bg-pink-800 text-gray-300 px-8 py-3 text-sm active:bg-pink-400'>ADD TO CART</button>
 <hr className='mt-8 sm:w-4/5' />
 <div className='text-sm text-gray-200 mt-5 flex flex-col gap-1'>
   <p>NO RETURN</p>
