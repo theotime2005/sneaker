@@ -1,7 +1,7 @@
 
 export const products = [
   {
-    id: 1,
+    id: 3,
     name: "EVOLUTION CHIP #01487",
     price: 12000,
     image: ["/assets/EVOLUTION1.jpg"],  
@@ -10,7 +10,7 @@ export const products = [
     category: "EYE"
   },
   {
-    id: 2,
+    id: 5,
     name: "EVOLUTION CHIP #01598",
     price: 9570,
     image: ["/assets/EVOLUTION2.jpg"],
@@ -19,7 +19,7 @@ export const products = [
     category: "BRAIN"
   },
   {
-    id: 3,
+    id: 7,
     name: "EVOLUTION CHIP #01854",
     price: 15000,
     image: ["/assets/EVOLUTION3.jpg"],
@@ -28,7 +28,7 @@ export const products = [
     category: "ARMS"
   },
   {
-    id: 4,
+    id: 9,
     name: "EVOLUTION CHIP #01373",
     price: 45000,
     image: ["/assets/EVOLUTION4.jpg"],
