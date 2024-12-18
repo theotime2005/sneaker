@@ -3,13 +3,13 @@ import { ShopContext } from '../context/ShopContext';
 import { Link } from 'react-router-dom';
 
 
-const Productitem = ({ id, image, name, price }) => {
+const Productitem = ({image, name, price, documentId }) => {
   const { currency } = useContext(ShopContext);
 
   return (
     <Link
       className="text-gray-100 hover:text-white cursor-pointer group"
-      to={`/product/${id}`}
+      to={`/product/${documentId}`}
     >
       <div className="relative overflow-hidden rounded-lg bg-black bg-opacity-80 shadow-neon-glow">
         <img

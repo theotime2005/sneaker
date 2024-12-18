@@ -21,7 +21,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-gray-300 text-lg md:text-xl">
-            Discover the newest additions to our collection. Elegance, style, and quality delivered right to you.
+            Discover the newest additions to our collection. 
           </p>
 
           <div className="mt-6">

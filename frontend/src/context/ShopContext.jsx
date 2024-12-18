@@ -1,15 +1,40 @@
 import { createContext, useEffect, useState } from "react";
-import { products } from "../../public/assets/assets.jsx";
 
 export const ShopContext = createContext();
 
 const ShopContextProvider = ({ children }) => {
   const currency = "$";
   const delivery_fee = 10;
+  const [products, setProducts] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCart] = useState({});
-  const [favorites, setFavorites] = useState([]); // State to manage favorite products
+  const [favorites, setFavorites] = useState([]); 
+
+  
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('http://localhost:1337/api/products');
+      if (!response.ok) {
+        throw new Error('Failed to fetch products');
+      }
+      const data = await response.json();
+      
+      setProducts(data.data); 
+      console.log(data); // Log des données pour voir leur structure
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
+
+  
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   // Add item to cart
   const addToCart = (itemId) => {
@@ -41,14 +66,16 @@ const ShopContextProvider = ({ children }) => {
   };
 
   const value = {
-    products,
+    products, 
+    loading, 
+    error, 
     currency,
     delivery_fee,
     search, setSearch,
     showSearch, setShowSearch,
     cartItems, addToCart,
     getCartCount,
-    favorites, addFavorite, removeFavorite, isFavorite // Expose favorites functionality
+    favorites, addFavorite, removeFavorite, isFavorite 
   };
 
   return (
@@ -59,5 +86,3 @@ const ShopContextProvider = ({ children }) => {
 };
 
 export default ShopContextProvider;
-
-

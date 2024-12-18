@@ -1,4 +1,3 @@
-
 export const products = [
   {
     id: 3,
@@ -35,5 +34,5 @@ export const products = [
     description: "Futuristic sunglasses with UV protection.",
     bestseller: false,
     category: "LEGS"
-  }
+  },
 ];

@@ -22,17 +22,19 @@ const BestSeller = () => {
       </div>
 
       
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {
-        bestSeller.map((item,index)=>(
-            <Productitem key={index} id={item.id}  name ={item.name} image={item.image} price={item.price}/>
-        ))
-    }
-
-</div>
-</div>
-  )
-}
-    
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+        {bestSeller.map((item, index) => (
+          <Productitem
+            key={index}
+            name={item.name}
+            image={item.image}
+            price={item.price}
+            documentId={item.documentId}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default BestSeller;
